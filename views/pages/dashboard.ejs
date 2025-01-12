@@ -1,0 +1,30 @@
+<%- include('../layout', { title: 'Dashboard' }) %>
+<body>
+
+<section class="dashboard">
+  <h2>Dashboard</h2>
+
+  <div class="projects">
+    <h3>Your Projects</h3>
+    <ul>
+      <% projects.forEach(project => { %>
+        <li>
+          <strong><%= project.name %></strong> (Deadline: <%= project.deadline %>)
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="tasks">
+    <h3>Your Tasks</h3>
+    <ul>
+      <% tasks.forEach(task => { %>
+        <li>
+          <%= task.name %> - <%= task.status %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+  
+</body>

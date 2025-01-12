@@ -1,0 +1,37 @@
+<%- include('../layout', { title: 'Tasks' }) %>
+<body>
+  
+
+<section class="tasks">
+  <h2>Tasks</h2>
+  <form action="/tasks/create" method="POST">
+    <label for="name">Task Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+      <option value="pending">Pending</option>
+      <option value="in progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <label for="project">Project:</label>
+    <select id="project" name="project">
+      <% projects.forEach(project => { %>
+        <option value="<%= project._id %>"><%= project.name %></option>
+      <% }) %>
+    </select>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul>
+    <% tasks.forEach(task => { %>
+      <li>
+        <%= task.name %> - <%= task.status %> (Project: <%= task.project.name %>)
+      </li>
+    <% }) %>
+  </ul>
+</section>
+
+</body>
