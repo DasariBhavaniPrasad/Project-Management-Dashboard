@@ -1,2 +1,2 @@
-# Flight-Reservation-Management-System
-This is a flight reservation management system project which is using java as a backend technology
+# Project-Dashborad
+This is a full stack Project named Project Management Dashboard, Here, i had used languages like HTML,CSS Markup languages and JavaScript for Scripting and NodeJs as Backend Technology and ExpressJs as Middleware
